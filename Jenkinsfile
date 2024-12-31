@@ -15,6 +15,13 @@ pipeline {
       }
     }
 
+    stage("scan-virus"){
+      steps {
+        sh 'echo "Scanning virus..."'
+        sh 'echo "Notify to Slack after scan virus..."'
+      }
+    }
+
     stage("deploy") {
       steps {
         sh 'echo "Deploying the game..."'
