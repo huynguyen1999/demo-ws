@@ -4,29 +4,21 @@ pipeline {
     stage("build") {
       steps {
         sh 'echo "Building the game..."'
-      }
-      steps {
-        sh 'notify to slack after build'
+        sh 'echo "Notify to Slack after build..."'
       }
     }
 
     stage("test") {
       steps {
         sh 'echo "Testing the game..."'
-      }
-
-      steps {
-        sh 'notify to slack after test'
+        sh 'echo "Notify to Slack after test..."'
       }
     }
 
     stage("deploy") {
       steps {
         sh 'echo "Deploying the game..."'
-      }
-
-      steps {
-        sh 'notify to slack after deploy'
+        sh 'echo "Notify to Slack after deploy..."'
       }
     }
   }
